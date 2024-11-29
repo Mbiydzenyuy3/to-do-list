@@ -49,6 +49,14 @@ form {
   justify-content: space-between;
 }
 
+button {
+  padding: 0.8em 1.5em;
+  background-color: #00f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
 li button {
   float: right;
   margin-right: 0;
@@ -56,23 +64,9 @@ li button {
   background-color: #f00;
 }
 
-ul li {
-  font-size: 1rem;
-  color: #fff;
-}
-
 input {
   padding: 0.8em;
   width: 100%;
-  padding: 0.5em 1em;
-}
-
-button {
-  padding: 0.8em 1.5em;
-  background-color: #00f;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
 }
 
 #container {
@@ -104,4 +98,6 @@ ul li {
   width: 100%;
   padding: 0.5em;
   border: 1px solid;
+  font-size: 1rem;
+  color: #fff;
 }
