@@ -16,7 +16,6 @@ document.getElementById('add-task').addEventListener('click', () => {
   taskSpan.textContent = taskText
   listBtn.textContent = 'delete'
 
-
   const list = []
   taskSpan.addEventListener('click', () => {
     newTask.classList.toggle('task completed')
