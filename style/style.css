@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 24px;
+  word-spacing: 1px;
+  width: 100%;
+}
+
+.page-wrapper {
+  width: 75%;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.input {
+  display: flex;
+  width: 100%;
+  gap: 4px;
+  margin: 1em;
+}
+
+.ul {
+  width: 100%;
+}
+
+#list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  padding: 0.8em 1.5em;
+  background-color: #00f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+li button {
+  float: right;
+  margin-right: 0;
+  margin-left: 2rem;
+  background-color: #f00;
+}
+
+input {
+  padding: 0.8em;
+  width: 100%;
+}
+
+#container {
+  width: 60%;
+  padding: 2em 1em;
+  margin: auto;
+  background-color: #023902;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+p {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+#ul {
+  gap: 0.5em;
+  width: 100%;
+  color: #fff;
+}
+
+ul li {
+  list-style-type: none;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid;
+  font-size: 1rem;
+  color: #fff;
+}
