@@ -1,39 +1,41 @@
-document.getElementById('add-task').addEventListener('click', () => {
+// get document and init variables to target element using id and add eventListeners 
+document.getElementById ('add-task').addEventListener('click', (event) => {
+  event.preventDefault()
   const inputTask = document.getElementById('input-value')
   const toDoTask = document.getElementById('list')
 
   const taskText = inputTask.value.trim()
   if (taskText === '') {
-    alert('enter valid task')
+    alert('Enter a valid task')
     return
   }
 
+  // Create new task elements
   const newTask = document.createElement('li')
   const taskSpan = document.createElement('span')
   const listBtn = document.createElement('button')
 
+  // Set up the task span and button
   taskSpan.className = 'progress'
   taskSpan.textContent = taskText
-  listBtn.textContent = 'delete'
+  listBtn.textContent = 'Done'
 
-  const list = []
-  taskSpan.addEventListener('click', () => {
-    newTask.classList.toggle('task completed')
+  taskSpan.addEventListener ('click', () => {
+    newTask.classList.toggle('completed')
+    if (newTask.classList.contains('completed')) {
+      taskSpan.style.textDecoration = 'line-through' // Strike through text
+    } else {
+      taskSpan.style.textDecoration = 'none' // Remove strike through
+    }
+  })
+
+  listBtn.addEventListener ('click', () => {
+    toDoTask.removeChild(newTask) 
   })
 
   newTask.appendChild(taskSpan)
-  toDoTask.appendChild(newTask)
-  taskSpan.appendChild(listBtn)
-  list.appendChild(newTask)
-
-  listBtn.addEventListener('click', () => {
-    list.removeChild(newTask)
-  })
-
-  listBtn.textContent = 'Done'
-  listBtn.addEventListener('click', () => {
-    list.strike(newTask.textContent)
-  })
+  newTask.appendChild(listBtn)
+  toDoTask.appendChild(newTask) // Clear input field after adding the task
 
   inputTask.value = ''
 })
