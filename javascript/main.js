@@ -1,5 +1,5 @@
-// get document and init variables to target element using id and add eventListeners 
-document.getElementById ('add-task').addEventListener('click', (event) => {
+// get document and init variables to target element using id and add eventListeners
+document.getElementById('add-task').addEventListener('click', (event) => {
   event.preventDefault()
   const inputTask = document.getElementById('input-value')
   const toDoTask = document.getElementById('list')
@@ -20,7 +20,7 @@ document.getElementById ('add-task').addEventListener('click', (event) => {
   taskSpan.textContent = taskText
   listBtn.textContent = 'Done'
 
-  taskSpan.addEventListener ('click', () => {
+  taskSpan.addEventListener('click', () => {
     newTask.classList.toggle('completed')
     if (newTask.classList.contains('completed')) {
       taskSpan.style.textDecoration = 'line-through' // Strike through text
@@ -29,8 +29,8 @@ document.getElementById ('add-task').addEventListener('click', (event) => {
     }
   })
 
-  listBtn.addEventListener ('click', () => {
-    toDoTask.removeChild(newTask) 
+  listBtn.addEventListener('click', () => {
+    toDoTask.removeChild(newTask)
   })
 
   newTask.appendChild(taskSpan)
